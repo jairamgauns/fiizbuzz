@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.util.Assert;
 
 @SpringBootTest
 public class FizzBuzzTest {
@@ -19,6 +20,6 @@ public class FizzBuzzTest {
     @Test
     public void testCanReturnFizzIFDivideByThree () {
          String value = fizzBuzz.printNumbers();
-        Assertions.assertEquals("Fizz", value);
+        Assertions.assertTrue(value.contains("Fizz"));
     }
 }

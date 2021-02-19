@@ -25,4 +25,13 @@ public class LeapYearTest {
             }
         }
     }
+
+    @Test
+    public void testYearDivisibleBy100ButNotBy400() {
+        for(int i=1;i< Calendar.getInstance().get(Calendar.YEAR);i++) {
+            if(i%100 == 0 && i%400 != 0) {
+                Assertions.assertEquals(Boolean.FALSE, leapYear.isLeapYear(i));
+            }
+        }
+    }
 }

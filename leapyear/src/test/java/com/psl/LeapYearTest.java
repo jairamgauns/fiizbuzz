@@ -43,4 +43,13 @@ public class LeapYearTest {
             }
         }
     }
+
+    @Test
+    public void testYearDivisibleNotBy4() {
+        for(int i=1;i< Calendar.getInstance().get(Calendar.YEAR);i++) {
+            if(i%4 != 0 ) {
+                Assertions.assertEquals(Boolean.FALSE, leapYear.isLeapYear(i));
+            }
+        }
+    }
 }
